@@ -1,0 +1,93 @@
+---
+title: "Major UI Redesign and Performance Improvements"
+description: "This update brings a complete redesign of the user interface along with significant performance enhancements and new features."
+date: "2025-06-15"
+tags: ["UI", "Performance", "Features"]
+version: "1.2"
+---
+
+## UI Overhaul
+
+We've completely redesigned the user interface to provide a more modern and intuitive experience:
+
+<ImageViewer 
+  src="/window.svg" 
+  alt="New UI Design" 
+  caption="The redesigned interface with modern styling"
+/>
+
+### New Features
+
+- **Dark Mode Support**: Toggle between light and dark themes
+- **Responsive Design**: Optimized for all screen sizes
+- **Improved Navigation**: Streamlined menu structure
+
+### Visual Improvements
+
+- Updated color palette with better contrast
+- Modernized typography and spacing
+- Enhanced button and form designs
+
+## Performance Improvements
+
+### Speed Enhancements
+
+- **50% faster load times** across all pages
+- Optimized image loading with lazy loading
+- Improved caching strategies
+
+### Technical Improvements
+
+- Upgraded to Next.js 15
+- Optimized bundle size
+- Enhanced SEO performance
+
+## Bug Fixes
+
+- Fixed navigation issues on mobile devices
+- Resolved form validation errors
+- Corrected responsive layout problems
+- Fixed memory leaks in component lifecycle
+
+## Developer Experience
+
+- Added comprehensive TypeScript definitions
+- Improved error handling and logging
+- Enhanced development tools and debugging
+
+## Mobile Improvements
+
+- Optimized touch interactions
+- Improved mobile navigation
+- Better mobile performance
+
+<Accordion title="Additional Details">
+
+### Breaking Changes
+
+Some components have been updated with new APIs:
+
+- **Button component**: New `variant` prop replaces `type`
+- **Form components**: Updated validation schema
+- **Theme system**: New CSS variables for customization
+
+### Code Examples
+
+```tsx
+// Old way
+<Button type="primary">Click me</Button>
+
+// New way
+<Button variant="default">Click me</Button>
+```
+
+### Migration Steps
+
+1. Update your imports
+2. Replace deprecated props
+3. Test your components
+4. Update your theme customizations
+
+</Accordion>
+
+**Migration Guide**: If you're upgrading from a previous version, please check our [migration guide](https://docs.example.com/migration) for breaking changes and upgrade instructions.
