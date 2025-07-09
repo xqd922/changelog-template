@@ -73,7 +73,7 @@ export default function HomePage() {
                 <div className="flex flex-col md:flex-row gap-y-6">
                   {/* Left side - Date and Version (Sticky) */}
                   <div className="md:w-48 flex-shrink-0">
-                    <div className="md:sticky md:top-8">
+                    <div className="md:sticky md:top-8 pb-10">
                       {/* Vertical gradient line */}
                       <div className="hidden lg:block absolute top-2 -right-[0.5px] w-px h-48 bg-gradient-to-b from-transparent via-primary to-transparent" />
 
@@ -92,7 +92,7 @@ export default function HomePage() {
                   {/* Right side - Content */}
                   <div className="flex-1 md:pl-8 relative pb-10">
                     {/* Vertical timeline line */}
-                    <div className="hidden md:block absolute top-2 left-0 w-px h-full bg-primary/30" />
+                    <div className="hidden md:block absolute top-2 left-0 w-px h-full bg-border" />
 
                     <div className="space-y-6">
                       <div className="relative z-10 flex flex-col gap-2">
