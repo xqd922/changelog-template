@@ -74,8 +74,6 @@ export default function HomePage() {
                   {/* Left side - Date and Version (Sticky) */}
                   <div className="md:w-48 flex-shrink-0">
                     <div className="md:sticky md:top-8 pb-10">
-                      {/* Vertical gradient line */}
-                      <div className="hidden lg:block absolute top-2 -right-[0.5px] w-px h-48 bg-gradient-to-b from-transparent via-primary to-transparent" />
 
                       <time className="text-sm font-medium text-muted-foreground block mb-3">
                         {formattedDate}
