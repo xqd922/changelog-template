@@ -1,93 +1,56 @@
 ---
 title: "Major UI Redesign and Performance Improvements"
-description: "This update brings a complete redesign of the user interface along with significant performance enhancements and new features."
+description: "Complete UI redesign with performance enhancements and new features."
 date: "2025-06-15"
 tags: ["UI", "Performance", "Features"]
 version: "1.2"
 ---
 
-## UI Overhaul
-
-We've completely redesigned the user interface to provide a more modern and intuitive experience:
+## UI Redesign
 
 <ImageViewer 
   src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D" 
   alt="New UI Design" 
-  caption="The redesigned interface with modern styling"
+  caption="Redesigned interface with modern styling"
 />
 
-### New Features
-
-- **Dark Mode Support**: Toggle between light and dark themes
-- **Responsive Design**: Optimized for all screen sizes
-- **Improved Navigation**: Streamlined menu structure
-
-### Visual Improvements
-
-- Updated color palette with better contrast
-- Modernized typography and spacing
+- **Dark Mode Support**: Toggle between themes
+- **Responsive Design**: Optimized for all devices
+- **Improved Navigation**: Streamlined menu
+- Updated color palette and typography
 - Enhanced button and form designs
 
-## Performance Improvements
+## Performance
 
-### Speed Enhancements
-
-- **50% faster load times** across all pages
+- **50% faster load times**
 - Optimized image loading with lazy loading
-- Improved caching strategies
-
-### Technical Improvements
-
 - Upgraded to Next.js 15
-- Optimized bundle size
-- Enhanced SEO performance
+- Improved bundle size and SEO
 
 ## Bug Fixes
 
-- Fixed navigation issues on mobile devices
+- Fixed mobile navigation issues
 - Resolved form validation errors
 - Corrected responsive layout problems
-- Fixed memory leaks in component lifecycle
+- Fixed memory leaks
 
-## Developer Experience
+## Breaking Changes
 
-- Added comprehensive TypeScript definitions
-- Improved error handling and logging
-- Enhanced development tools and debugging
+<Accordion title="Migration Details">
 
-## Mobile Improvements
-
-- Optimized touch interactions
-- Improved mobile navigation
-- Better mobile performance
-
-<Accordion title="Additional Details">
-
-### Breaking Changes
-
-Some components have been updated with new APIs:
-
-- **Button component**: New `variant` prop replaces `type`
-- **Form components**: Updated validation schema
-- **Theme system**: New CSS variables for customization
-
-### Code Examples
+**Button component**: `variant` prop replaces `type`
 
 ```tsx
-// Old way
+// Old
 <Button type="primary">Click me</Button>
 
-// New way
+// New
 <Button variant="default">Click me</Button>
 ```
 
-### Migration Steps
-
-1. Update your imports
+**Migration steps:**
+1. Update imports
 2. Replace deprecated props
-3. Test your components
-4. Update your theme customizations
+3. Test components
 
 </Accordion>
-
-**Migration Guide**: If you're upgrading from a previous version, please check our [migration guide](https://docs.example.com/migration) for breaking changes and upgrade instructions.
