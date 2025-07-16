@@ -1,22 +1,22 @@
-import { docs, meta } from '@/.source'
-import { DocsBody } from 'fumadocs-ui/page'
-import { loader } from 'fumadocs-core/source'
-import { createMDXSource } from 'fumadocs-mdx'
-import { ThemeToggle } from '@/components/theme-toggle'
-import { useMemo } from 'react'
+import { docs, meta } from "@/.source"
+import { DocsBody } from "fumadocs-ui/page"
+import { loader } from "fumadocs-core/source"
+import { createMDXSource } from "fumadocs-mdx"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { useMemo } from "react"
 
 // Create source object
 const source = loader({
-  baseUrl: '/docs',
+  baseUrl: "/docs",
   source: createMDXSource(docs, meta),
 })
 
 // Date formatting helper
 const formatDate = (date: Date): string => {
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   })
 }
 
@@ -74,7 +74,6 @@ export default function HomePage() {
                   {/* Left side - Date and Version (Sticky) */}
                   <div className="md:w-48 flex-shrink-0">
                     <div className="md:sticky md:top-8 pb-10">
-
                       <time className="text-sm font-medium text-muted-foreground block mb-3">
                         {formattedDate}
                       </time>
@@ -102,18 +101,19 @@ export default function HomePage() {
                         <div className="hidden md:block absolute top-2 -left-10 w-4 h-4 bg-primary rounded-full z-10" />
 
                         {/* Tags */}
-                        {changelog.data.tags && changelog.data.tags.length > 0 && (
-                          <div className="flex flex-wrap gap-2">
-                            {changelog.data.tags.map((tag: string) => (
-                              <span
-                                key={tag}
-                                className="h-6 w-fit px-2 text-xs font-medium bg-muted text-muted-foreground rounded-full border flex items-center justify-center"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        )}
+                        {changelog.data.tags &&
+                          changelog.data.tags.length > 0 && (
+                            <div className="flex flex-wrap gap-2">
+                              {changelog.data.tags.map((tag: string) => (
+                                <span
+                                  key={tag}
+                                  className="h-6 w-fit px-2 text-xs font-medium bg-muted text-muted-foreground rounded-full border flex items-center justify-center"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                       </div>
 
                       {/* Content */}
