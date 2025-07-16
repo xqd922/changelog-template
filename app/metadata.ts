@@ -4,22 +4,14 @@ import { siteConfig } from "@/lib/site"
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
-  keywords: [
-    "Changelog",
-    "Magic UI",
-    "Magic UI Changelog",
-    "Magic UI Changelog Template",
-    "Magic UI Changelog Template Next.js",
-    "Magic UI Changelog Template Tailwind",
-    "Magic UI Changelog Template Shadcn",
-  ],
+  keywords: siteConfig.keywords,
   authors: [
     {
-      name: "Dillion Verma",
+      name: "Magic UI",
       url: "https://magicui.design",
     },
   ],
-  creator: "dillionverma",
+  creator: "magicuidesign",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -32,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    creator: "@dillionverma",
+    creator: "@magicuidesign",
   },
   robots: {
     index: true,

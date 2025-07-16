@@ -6,6 +6,14 @@ export const siteConfig = {
     twitter: "https://x.com/magicuidesign",
     github: "https://github.com/magicuidesign",
   },
+  keywords: [
+    "Changelog",
+    "Next.js",
+    "Fumadocs",
+    "Tailwind CSS",
+    "shadcn",
+    "Magic UI",
+  ],
 }
 
 export type SiteConfig = typeof siteConfig
