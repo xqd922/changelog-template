@@ -27,17 +27,19 @@ changelog-template/
 ├── lib/                    # Utilities
 ├── public/                 # Static assets
 ├── mdx-components.tsx      # MDX component overrides
-└── source.config.ts         # Fumadocs configuration
+└── source.config.ts        # Fumadocs configuration
 ```
 
 ## Getting Started
 
 1. Install dependencies:
+
 ```bash
 pnpm install
 ```
 
 2. Run development server:
+
 ```bash
 pnpm dev
 ```
@@ -78,6 +80,7 @@ Your changelog content here...
 ## Deployment
 
 Deploy to any Next.js compatible platform:
+
 - [Vercel](https://vercel.com) (recommended)
 - [Netlify](https://netlify.com)
 - [Cloudflare Pages](https://pages.cloudflare.com)
