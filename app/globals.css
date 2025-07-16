@@ -45,23 +45,23 @@
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
   
-@keyframes accordion-down {
-  from {
-    height: 0;
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
   }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
-}
 
-@keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
-  to {
-    height: 0;
-  }
-}
 }
 
 :root {
@@ -146,10 +146,10 @@
     @apply bg-background text-foreground;
   }
 
-.shiki > div > button {
-   border-top-left-radius: 0 !important;
-   border-bottom-right-radius: 0 !important;
-}
+  .shiki > div > button {
+    border-top-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
 }
 
 

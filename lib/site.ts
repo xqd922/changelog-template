@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "Magic UI Changelog   ",
-  url: "https://magicui-changelog.vercel.app",
-  description: "Your template for building simple changelog pages.",
+  name: "Changelog Template",
+  url: "https://changelog-magicui.vercel.app",
+  description: "A minimal changelog template built using Next.js.",
   links: {
-    twitter: "https://x.com/dillionverma",
-    github: "https://github.com/dillionverma",
+    twitter: "https://x.com/magicuidesign",
+    github: "https://github.com/magicuidesign",
   },
 }
 

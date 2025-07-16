@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og"
 
 // Configuration exports
 export const runtime = "edge"
-export const alt = "Magic UI Changelog - A simple changelog page template"
+export const alt = "Changelog Template"
 export const size = {
   width: 1200,
   height: 630,
@@ -31,7 +31,7 @@ export default async function Image() {
           }}
         >
           <img
-            src={`${baseUrl}/changelog-template-og-image.png`}
+            src={`${baseUrl}/og.png`}
             alt={alt}
             style={{
               width: "100%",

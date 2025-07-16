@@ -1,19 +1,31 @@
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import type { MDXComponents } from "mdx/types"
 import {
-  MediaViewer,
-  ImageViewer,
-  VideoViewer,
-} from "@/components/ui/media-viewer"
-import { MdxAccordion } from "@/components/ui/accordion"
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { cn } from "@/lib/utils"
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
-    MediaViewer,
-    ImageViewer,
-    VideoViewer,
-    Accordion: MdxAccordion,
+    img: ({ className, ...props }: React.ComponentProps<"img">) => (
+      <img className={cn("rounded-md border", className)} {...props} />
+    ),
+    Video: ({ className, ...props }: React.ComponentProps<"video">) => (
+      <video
+        className={cn("rounded-md border", className)}
+        controls
+        loop
+        {...props}
+      />
+    ),
+    Accordion,
+    AccordionItem,
+    AccordionTrigger,
+    AccordionContent,
     ...components,
   }
 }

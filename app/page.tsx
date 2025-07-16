@@ -1,26 +1,15 @@
 import { docs, meta } from "@/.source"
-import { DocsBody } from "fumadocs-ui/page"
 import { loader } from "fumadocs-core/source"
 import { createMDXSource } from "fumadocs-mdx"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useMemo } from "react"
+import { formatDate } from "@/lib/utils"
 
-// Create source object
 const source = loader({
   baseUrl: "/docs",
   source: createMDXSource(docs, meta),
 })
 
-// Date formatting helper
-const formatDate = (date: Date): string => {
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  })
-}
-
-// Type for changelog data
 interface ChangelogData {
   title: string
   date: string
@@ -35,7 +24,6 @@ interface ChangelogPage {
 }
 
 export default function HomePage() {
-  // Get all pages and sort by date (newest first) - memoized for performance
   const sortedChangelogs = useMemo(() => {
     const allPages = source.getPages() as ChangelogPage[]
     return allPages.sort((a, b) => {
@@ -47,9 +35,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Background border */}
-      <div className="absolute max-w-5xl left-1/2 -translate-x-1/2 w-full h-full border-x border-border" />
-
       {/* Header */}
       <div className="border-b border-border/50">
         <div className="max-w-5xl mx-auto relative">
@@ -71,7 +56,6 @@ export default function HomePage() {
             return (
               <div key={changelog.url} className="relative">
                 <div className="flex flex-col md:flex-row gap-y-6">
-                  {/* Left side - Date and Version (Sticky) */}
                   <div className="md:w-48 flex-shrink-0">
                     <div className="md:sticky md:top-8 pb-10">
                       <time className="text-sm font-medium text-muted-foreground block mb-3">
@@ -79,7 +63,7 @@ export default function HomePage() {
                       </time>
 
                       {changelog.data.version && (
-                        <div className="inline-flex relative z-10 items-center justify-center w-10 h-10 bg-foreground text-background rounded-lg text-sm font-bold">
+                        <div className="inline-flex relative z-10 items-center justify-center w-10 h-10 text-foreground border border-border rounded-lg text-sm font-bold">
                           {changelog.data.version}
                         </div>
                       )}
@@ -89,16 +73,16 @@ export default function HomePage() {
                   {/* Right side - Content */}
                   <div className="flex-1 md:pl-8 relative pb-10">
                     {/* Vertical timeline line */}
-                    <div className="hidden md:block absolute top-2 left-0 w-px h-full bg-border" />
+                    <div className="hidden md:block absolute top-2 left-0 w-px h-full bg-border">
+                      {/* Timeline dot */}
+                      <div className="hidden md:block absolute -translate-x-1/2 size-3 bg-primary rounded-full z-10" />
+                    </div>
 
                     <div className="space-y-6">
                       <div className="relative z-10 flex flex-col gap-2">
                         <h2 className="text-2xl font-semibold tracking-tight text-balance">
                           {changelog.data.title}
                         </h2>
-
-                        {/* Timeline dot */}
-                        <div className="hidden md:block absolute top-2 -left-10 w-4 h-4 bg-primary rounded-full z-10" />
 
                         {/* Tags */}
                         {changelog.data.tags &&
@@ -115,12 +99,8 @@ export default function HomePage() {
                             </div>
                           )}
                       </div>
-
-                      {/* Content */}
                       <div className="prose dark:prose-invert max-w-none prose-headings:scroll-mt-8 prose-headings:font-semibold prose-a:no-underline prose-headings:tracking-tight prose-headings:text-balance prose-p:tracking-tight prose-p:text-balance">
-                        <DocsBody>
-                          <MDX />
-                        </DocsBody>
+                        <MDX />
                       </div>
                     </div>
                   </div>

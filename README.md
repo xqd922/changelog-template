@@ -1,6 +1,6 @@
-# Magic UI Changelog
+# Changelog Template
 
-A modern, responsive changelog built with Next.js 15, Fumadocs MDX, and Tailwind CSS. Beautiful timeline interface for displaying project updates and releases.
+A minimal changelog template built using Next.js. Used to showcase product releases, features, and bug fixes in chronological order.
 
 ## Features
 
@@ -13,13 +13,13 @@ A modern, responsive changelog built with Next.js 15, Fumadocs MDX, and Tailwind
 ## Project Structure
 
 ```
-Magic UI-changelog/
-├── app/                     # Next.js App Router
+changelog-template/
+├── app/                    # Next.js App Router
 │   ├── layout.tsx
 │   ├── page.tsx
 │   ├── metadata.ts
 │   └── opengraph-image.tsx
-├── changelog/content/       # MDX changelog entries
+├── changelog/content/      # MDX changelog entries
 ├── components/             # React components
 │   ├── ui/                 # UI components
 │   ├── theme-provider.tsx
@@ -27,7 +27,7 @@ Magic UI-changelog/
 ├── lib/                    # Utilities
 ├── public/                 # Static assets
 ├── mdx-components.tsx      # MDX component overrides
-└── source.config.ts        # Fumadocs configuration
+└── source.config.ts         # Fumadocs configuration
 ```
 
 ## Getting Started
@@ -46,7 +46,7 @@ pnpm dev
 
 ## Adding Changelog Entries
 
-Create a new MDX file in `changelog/content/` with format `DD-MM-YYYY-changelog.mdx`:
+Create a new MDX file in `changelog/content/` with format `YYYY-MM-DD.mdx`:
 
 ```mdx
 ---
@@ -72,7 +72,7 @@ Your changelog content here...
 - **Framework**: Next.js 15
 - **Content**: Fumadocs MDX
 - **Styling**: Tailwind CSS
-- **UI**: Shadcn/ui components
+- **UI**: shadcn/ui components
 - **TypeScript**: Full type safety
 
 ## Deployment

@@ -6,7 +6,10 @@ import { siteConfig } from "@/lib/site"
 import "./globals.css"
 
 export const viewport: Viewport = {
-  themeColor: "black",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  ],
 }
 
 export const metadata: Metadata = {
